@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link href="index.css" rel="stylesheet" />
+    <title>Marketplace</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="navbar-brand" href="#">
+        <img src="/static/logo.png" alt="" class="logo" />
+      </a>
+      <div class="row navRow">
+        <div class="col">
+          <form class="d-flex me-4">
+            <input
+              class="form-control rounded-0"
+              id="searchWord"
+              type="search"
+              placeholder="Filtrar por categoria"
+              aria-label="Search"
+            />
+            <button class="btn rounded-0 search" type="submit" id="searchBut">
+              <img
+                src="/static/search.png"
+                alt="search button"
+                id="searchIcon"
+              />
+            </button>
+          </form>
+        </div>
+        <div class="col navFav">
+          <a class="fav" href="#">
+            <img src="/static/fav.png" alt="favorites" width="44" height="40" />
+          </a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div
+        class="alert alert-danger alert-dismissible fade show text-center"
+        role="alert"
+      >
+        <strong>No se han encontrado resultados de su busqueda!</strong>
+        <button
+          type="button"
+          class="btn-close"
+          id="alertClose"
+          aria-label="Close"
+        ></button>
+        <!-- data-bs-dismiss="alert" -->
+      </div>
+      <!-- aria-labelledby="staticBackdropLabel" -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body text-center"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn close-modal"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content"></div>
+      <div class="detailPage">
+        <div class="contDetail">
+          <div class="row m-0">
+            <div class="col leftSide det"></div>
+            <div class="col rightSide det"></div>
+          </div>
+        </div>
+      </div>
+      <div class="favContent"></div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
